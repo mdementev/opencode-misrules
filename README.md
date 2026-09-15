@@ -2,6 +2,8 @@
 
 Keep your project conventions in the agent's head — for good.
 
+[![npm version](https://img.shields.io/npm/v/opencode-misrules.svg)](https://www.npmjs.com/package/opencode-misrules)
+
 Load the `.md` files you need (code style, examples, agreements) and the agent follows them for the whole session. Even after compaction, they're never forgotten. No relying on skills deciding on their own whether to kick in — you control exactly what the agent follows.
 
 ```bash
