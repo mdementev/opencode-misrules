@@ -24,7 +24,7 @@ Behind the scenes the agent calls `misrules_add`. From then on, those rules are 
 
 ## Lock it down
 
-`.opencode/misrules.json` — block sensitive files from ever being loaded:
+`.opencode/misrules.json` (or `~/.config/opencode/misrules.json`) — block sensitive files from ever being loaded:
 
 ```json
 { "denyPatterns": ["*.env*", "*secret*"] }

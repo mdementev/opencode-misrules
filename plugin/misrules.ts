@@ -93,7 +93,6 @@ export const Misrules: Plugin = async ({ directory }) => {
       if (!input.sessionID) return
       const block = registry.block(input.sessionID)
       if (!block) return
-      // opencode mutates the system array in place; push keeps l[0] unchanged
       output.system.push(block)
     },
     "experimental.session.compacting": async (input, output) => {

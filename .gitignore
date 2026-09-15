@@ -3,4 +3,5 @@ dist/
 STATUS.md
 notes/
 experiments/
+test-fixtures/
 .DS_Store

@@ -71,7 +71,7 @@ export function loadConfig(directory: string): MisrulesConfig {
         : []
       return { denyPatterns }
     } catch {
-      // unreadable or malformed config is ignored
+      return { denyPatterns: [] }
     }
   }
   return { denyPatterns: [] }
@@ -126,7 +126,7 @@ export class RuleRegistry {
       if (seen.has(absolute)) continue
       seen.add(absolute)
 
-      let stats
+      let stats: ReturnType<typeof statSync>
       try {
         stats = statSync(absolute)
       } catch {
@@ -200,9 +200,7 @@ export class RuleRegistry {
   list(sessionID: string, directory: string): string[] {
     const store = this.sessions.get(sessionID)
     if (!store) return []
-    return [...store.values()].map((r) =>
-      r.display !== r.absolute ? r.display : r.absolute,
-    )
+    return [...store.values()].map((r) => r.display)
   }
 
   drop(sessionID: string): void {
