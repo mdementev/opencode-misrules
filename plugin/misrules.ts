@@ -1,4 +1,4 @@
-import { tool, type Plugin } from "@opencode-ai/plugin"
+import { tool, type Plugin, type PluginModule } from "@opencode-ai/plugin"
 import type { Event } from "@opencode-ai/sdk"
 import { accessSync, constants, readdirSync, readFileSync, statSync, type Dirent } from "node:fs"
 import { homedir } from "node:os"
@@ -328,3 +328,8 @@ export const Misrules: Plugin = async ({ directory }) => {
     },
   }
 }
+
+export default {
+  id: "opencode-misrules",
+  server: Misrules,
+} satisfies PluginModule
