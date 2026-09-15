@@ -11,5 +11,5 @@
     "skipLibCheck": true,
     "types": ["node"]
   },
-  "include": ["plugin", "src"]
+  "include": ["plugin"]
 }

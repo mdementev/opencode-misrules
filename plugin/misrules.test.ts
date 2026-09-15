@@ -3,7 +3,7 @@ import assert from "node:assert/strict"
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs"
 import { tmpdir } from "node:os"
 import { join } from "node:path"
-import { globToRegex, loadConfig, RuleRegistry } from "./registry.ts"
+import { globToRegex, loadConfig, RuleRegistry } from "./misrules.ts"
 
 function setupProject() {
   const dir = mkdtempSync(join(tmpdir(), "misrules-test-"))

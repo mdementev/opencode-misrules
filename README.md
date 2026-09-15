@@ -10,6 +10,19 @@ Load the `.md` files you need (code style, examples, agreements) and the agent f
 opencode plugin opencode-misrules -g
 ```
 
+### Manual install
+
+The plugin is a single self-contained file. Copy it into your global plugin
+folder and restart opencode:
+
+```bash
+mkdir -p ~/.config/opencode/plugin
+cp plugin/misrules.ts ~/.config/opencode/plugin/misrules.ts
+```
+
+`@opencode-ai/plugin` is already available under
+`~/.config/opencode/node_modules`, so no extra install step is needed.
+
 ## Use
 
 Ask the agent to load your project docs:

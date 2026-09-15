@@ -1,6 +1,6 @@
 {
   "name": "opencode-misrules",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "opencode plugin: persistent session rules that survive compaction",
   "type": "module",
   "license": "MIT",
@@ -16,8 +16,7 @@
     "compaction"
   ],
   "files": [
-    "plugin/misrules.ts",
-    "src/registry.ts"
+    "plugin/misrules.ts"
   ],
   "main": "plugin/misrules.ts",
   "exports": {
@@ -26,7 +25,7 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "tsc --noEmit",
-    "test": "node --test \"src/*.test.ts\""
+    "test": "node --test \"plugin/*.test.ts\""
   },
   "engines": {
     "opencode": ">=1.18.0"
